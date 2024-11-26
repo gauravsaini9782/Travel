@@ -9,6 +9,11 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import HotelBooking from "./HotelBooking";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import JungleSafariBooking from "./JungleSafariBooking";
+import TaxiBooking from "./TaxiBooking";
+import SawaiMadhopurDestinations from "./SawaMadhopurDestinations";
+import PlanYourTrip from "./PlanYourTripPage";
+import AboutUs from "./AboutUs";
 
 function App() {
   return (
@@ -31,8 +36,11 @@ function App() {
             }
           />
           <Route path="/hotel-booking" element={<HotelBooking />} />
-          <Route path="/safari-booking" element={<HotelBooking />} />
-          <Route path="/xyz-booking" element={<HotelBooking />} />
+          <Route path="/safari-booking" element={<JungleSafariBooking/>} />
+          <Route path="/taxi-booking" element={<TaxiBooking />} />
+          <Route path="/destinations" element={<SawaiMadhopurDestinations/>} />
+          <Route path="/contact-us" element={<PlanYourTrip/>} />
+          <Route path="/about-us" element={<AboutUs/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
