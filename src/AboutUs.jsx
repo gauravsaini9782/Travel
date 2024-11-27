@@ -92,18 +92,23 @@ const AboutUs = () => {
           </div>
         </div> */}
 
-        {/* Section 5: Contact Us */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h3>
-          <p className="text-lg text-gray-600 mb-6">
-            Have questions or need more information? Feel free to reach out to us anytime.
-          </p>
+        {/* Action Buttons */}
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full md:w-auto justify-center">
+          {/* Contact Us */}
           <a
-            href="/contact-us"
-            className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-600 transition duration-300"
+            href="https://wa.me/9782312413?text=Hi%20there!%20I'm%20interested%20in%20learning%20more%20about%20your%20Ranthambore%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg shadow-md transition duration-300 w-full md:w-auto"
           >
+            <img
+              src="https://img.icons8.com/color/48/whatsapp.png"
+              alt="WhatsApp Icon"
+              className="w-6 h-6 mr-2"
+            />
             Contact Us
           </a>
+          
         </div>
       </div>
     </div>

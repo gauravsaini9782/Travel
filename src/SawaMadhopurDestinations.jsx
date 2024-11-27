@@ -1,81 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
+import destinations from './destinations';
+import PlanYourTrip from './PlanYourTripPage';
+
 
 const SawaiMadhopurDestinations = () => {
-  const destinations = [
-    {
-      name: 'Ranthambore National Park',
-      description:
-        'Famous for its tiger sightings, this national park is home to tigers, leopards, and a variety of other wildlife. Safari tours are available for a chance to experience the park up close.',
-      image: '/images/ranthambore-park.jpg',
-    },
-    {
-      name: 'Ranthambore Fort',
-      description:
-        'A UNESCO World Heritage site, the Ranthambore Fort is over 1,000 years old and offers panoramic views of the surrounding landscape and park.',
-      image: '/images/ranthambore-fort.jpg',
-    },
-    {
-      name: 'Trinetra Ganesh Temple',
-      description:
-        'Located inside the national park, this ancient temple is dedicated to Lord Ganesh, offering both spiritual solace and a peaceful retreat.',
-      image: '/images/trinetra-ganesh.jpg',
-    },
-    {
-      name: 'Kala Gaura Bhairav Temple',
-      description:
-        'Known for its tantric rituals, this hilltop temple provides a unique spiritual experience, offering stunning views of the surrounding wilderness.',
-      image: '/images/kala-gaura-bhairav.jpg',
-    },
-    {
-      name: 'Rajiv Gandhi Regional Museum of Natural History',
-      description:
-        'This museum in Sawai Madhopur educates visitors about the region’s rich biodiversity, displaying various exhibits on the area’s flora and fauna.',
-      image: '/images/museum.jpg',
-    },
-    {
-        name: 'Ranthambore National Park',
-        description:
-          'Famous for its tiger sightings, this national park is home to tigers, leopards, and a variety of other wildlife. Safari tours are available for a chance to experience the park up close.',
-        image: '/images/ranthambore-park.jpg',
-      },
-      {
-        name: 'Ranthambore Fort',
-        description:
-          'A UNESCO World Heritage site, the Ranthambore Fort is over 1,000 years old and offers panoramic views of the surrounding landscape and park.',
-        image: '/images/ranthambore-fort.jpg',
-      },
-      {
-        name: 'Trinetra Ganesh Temple',
-        description:
-          'Located inside the national park, this ancient temple is dedicated to Lord Ganesh, offering both spiritual solace and a peaceful retreat.',
-        image: '/images/trinetra-ganesh.jpg',
-      },
-      {
-        name: 'Kala Gaura Bhairav Temple',
-        description:
-          'Known for its tantric rituals, this hilltop temple provides a unique spiritual experience, offering stunning views of the surrounding wilderness.',
-        image: '/images/kala-gaura-bhairav.jpg',
-      },
-      {
-        name: 'Rajiv Gandhi Regional Museum of Natural History',
-        description:
-          'This museum in Sawai Madhopur educates visitors about the region’s rich biodiversity, displaying various exhibits on the area’s flora and fauna.',
-        image: '/images/museum.jpg',
-      },
-      {
-        name: 'Kala Gaura Bhairav Temple',
-        description:
-          'Known for its tantric rituals, this hilltop temple provides a unique spiritual experience, offering stunning views of the surrounding wilderness.',
-        image: '/images/kala-gaura-bhairav.jpg',
-      },
-      {
-        name: 'Rajiv Gandhi Regional Museum of Natural History',
-        description:
-          'This museum in Sawai Madhopur educates visitors about the region’s rich biodiversity, displaying various exhibits on the area’s flora and fauna.',
-        image: '/images/museum.jpg',
-      },
-  ];
+  const [visiblity, setVisibility] = useState(false)
 
+  const visibilityHandler = () => {
+    setVisibility(true)
+  }
+  if(visiblity) return <PlanYourTrip setVisibility={setVisibility} />
   return (
     <section className="bg-FBFBEC py-16">
       <div className="container mx-auto px-4 md:px-8">
@@ -111,12 +45,12 @@ const SawaiMadhopurDestinations = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <a
-            href="/contact-us"
+          <button
             className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-600 transition duration-300"
+            onClick={visibilityHandler}
           >
             Plan Your Trip Now
-          </a>
+          </button>
         </div>
       </div>
     </section>

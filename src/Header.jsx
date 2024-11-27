@@ -23,11 +23,10 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <img
-            src="your-logo-url.png"
+            src="/images/logoooooo.png"
             alt="Logo"
-            className="h-8 w-8 object-contain"
-          />
-          <span className="font-bold text-lg">Your Brand</span>
+            className=" w-[210px] object-contain"/>
+          
         </div>
 
         {/* Navigation */}
@@ -76,12 +75,12 @@ const Header = () => {
         </nav>
 
         {/* Explore Packages Button - Desktop Only */}
-        <a
+        {/* <a
           href="/explore-packages"
           className="hidden md:block bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded-full"
         >
           Explore Packages
-        </a>
+        </a> */}
 
         {/* Mobile Menu */}
         <div className="md:hidden relative">

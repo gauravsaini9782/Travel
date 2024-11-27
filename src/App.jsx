@@ -14,6 +14,7 @@ import TaxiBooking from "./TaxiBooking";
 import SawaiMadhopurDestinations from "./SawaMadhopurDestinations";
 import PlanYourTrip from "./PlanYourTripPage";
 import AboutUs from "./AboutUs";
+import ExplorePackages from "./ExplorePackages";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
           <Route path="/taxi-booking" element={<TaxiBooking />} />
           <Route path="/destinations" element={<SawaiMadhopurDestinations/>} />
           <Route path="/contact-us" element={<PlanYourTrip/>} />
-          <Route path="/about-us" element={<AboutUs/>} />
+          <Route path="/about-us" element={<AboutUs/>}/>
+          <Route path="/explore-packages" element={<ExplorePackages/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
